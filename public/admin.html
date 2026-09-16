@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>
+        Admin Movie Manager
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+</head>
+
+<body>
+
+<header>
+
+    <h1>
+        🛠 Admin Movie Manager
+    </h1>
+
+    <p>
+        Add, edit and delete movies
+    </p>
+
+</header>
+
+
+<main>
+
+
+    <section class="search-section">
+
+        <h2>
+            Search Movies
+        </h2>
+
+
+        <input
+            type="text"
+            id="search"
+            placeholder="Search movie..."
+        >
+
+
+        <button
+            onclick="searchMovies()"
+        >
+            🔍 Search
+        </button>
+
+
+        <button
+            onclick="loadMovies()"
+        >
+            Show All
+        </button>
+
+    </section>
+
+
+
+    <section class="add-movie-section">
+
+        <h2 id="formTitle">
+            ➕ Add Movie
+        </h2>
+
+
+        <form id="movieForm">
+
+
+            <input
+                type="text"
+                id="title"
+                placeholder="Movie Title"
+                required
+            >
+
+
+            <input
+                type="number"
+                id="year"
+                placeholder="Release Year"
+                required
+            >
+
+
+            <input
+                type="text"
+                id="genre"
+                placeholder="Genre"
+                required
+            >
+
+
+            <input
+                type="url"
+                id="image"
+                placeholder="Image URL"
+            >
+
+
+            <input
+                type="number"
+                id="rating"
+                min="0"
+                max="10"
+                step="0.1"
+                placeholder="Rating / 10"
+            >
+
+
+            <textarea
+                id="review"
+                placeholder="Movie review"
+            ></textarea>
+
+
+            <button type="submit">
+                💾 Save Movie
+            </button>
+
+
+            <button
+                type="button"
+                onclick="cancelEdit()"
+            >
+                Cancel
+            </button>
+
+
+        </form>
+
+    </section>
+
+
+
+    <section>
+
+        <h2>
+            🎬 All Movies
+        </h2>
+
+
+        <div
+            id="movies"
+            class="movies-container"
+        >
+
+            Loading...
+
+        </div>
+
+    </section>
+
+
+</main>
+
+
+<script src="admin.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,519 @@
+* {
+
+    box-sizing: border-box;
+
+    margin: 0;
+
+    padding: 0;
+
+}
+
+
+body {
+
+    font-family: Arial, sans-serif;
+
+    background: #f4f6f9;
+
+    color: #222;
+
+}
+
+
+header {
+
+    background:
+        linear-gradient(
+            135deg,
+            #141e30,
+            #243b55
+        );
+
+    color: white;
+
+    padding: 30px;
+
+    text-align: center;
+
+}
+
+
+header h1 {
+
+    margin-bottom: 10px;
+
+}
+
+
+nav {
+
+    margin-top: 20px;
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 20px;
+
+    flex-wrap: wrap;
+
+}
+
+
+nav a {
+
+    color: white;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+}
+
+
+nav a:hover {
+
+    text-decoration: underline;
+
+}
+
+
+main {
+
+    width: 90%;
+
+    max-width: 1200px;
+
+    margin: 30px auto;
+
+}
+
+
+.hero {
+
+    background: white;
+
+    padding: 40px;
+
+    text-align: center;
+
+    border-radius: 12px;
+
+    margin-bottom: 25px;
+
+}
+
+
+.hero h2 {
+
+    font-size: 32px;
+
+    margin-bottom: 10px;
+
+}
+
+
+.search-section {
+
+    background: white;
+
+    padding: 25px;
+
+    border-radius: 12px;
+
+    margin-bottom: 30px;
+
+}
+
+
+.search-section input {
+
+    width: 60%;
+
+    padding: 12px;
+
+    border: 1px solid #ccc;
+
+    border-radius: 6px;
+
+}
+
+
+button {
+
+    padding: 11px 18px;
+
+    border: none;
+
+    border-radius: 6px;
+
+    background: #243b55;
+
+    color: white;
+
+    cursor: pointer;
+
+    margin: 5px;
+
+}
+
+
+button:hover {
+
+    background: #141e30;
+
+}
+
+
+.movies-container {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            auto-fill,
+            minmax(250px, 1fr)
+        );
+
+    gap: 25px;
+
+    margin-top: 20px;
+
+}
+
+
+.movie-card {
+
+    background: white;
+
+    border-radius: 12px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 4px 12px
+        rgba(0,0,0,0.1);
+
+}
+
+
+.movie-card:hover {
+
+    transform:
+        translateY(-3px);
+
+}
+
+
+.movie-image {
+
+    width: 100%;
+
+    height: 350px;
+
+    object-fit: cover;
+
+    display: block;
+
+}
+
+
+.movie-info {
+
+    padding: 18px;
+
+}
+
+
+.movie-info h2 {
+
+    margin-bottom: 10px;
+
+    color: #243b55;
+
+}
+
+
+.movie-info p {
+
+    margin-bottom: 10px;
+
+    line-height: 1.5;
+
+}
+
+
+.rating {
+
+    display: inline-block;
+
+    background: #fff3cd;
+
+    color: #8a6200;
+
+    padding: 7px 10px;
+
+    border-radius: 6px;
+
+    font-weight: bold;
+
+}
+
+
+.add-movie-section {
+
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 12px;
+
+    margin-bottom: 30px;
+
+}
+
+
+#movieForm {
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 15px;
+
+}
+
+
+#movieForm input,
+#movieForm textarea {
+
+    padding: 12px;
+
+    border: 1px solid #ccc;
+
+    border-radius: 6px;
+
+    font-size: 15px;
+
+}
+
+
+#movieForm textarea {
+
+    grid-column: 1 / -1;
+
+    min-height: 100px;
+
+}
+
+
+#movieForm button {
+
+    width: fit-content;
+
+}
+
+
+.auth-box {
+
+    background: white;
+
+    max-width: 450px;
+
+    margin: 60px auto;
+
+    padding: 35px;
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 4px 15px
+        rgba(0,0,0,0.1);
+
+}
+
+
+.auth-box h2 {
+
+    margin-bottom: 20px;
+
+}
+
+
+.auth-box input {
+
+    width: 100%;
+
+    padding: 13px;
+
+    margin-bottom: 15px;
+
+    border: 1px solid #ccc;
+
+    border-radius: 6px;
+
+}
+
+
+.auth-box button {
+
+    width: 100%;
+
+    margin: 0 0 15px;
+
+}
+
+
+.movie-detail {
+
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 12px;
+
+    display: grid;
+
+    grid-template-columns:
+        300px 1fr;
+
+    gap: 30px;
+
+}
+
+
+.detail-image {
+
+    width: 100%;
+
+    border-radius: 10px;
+
+}
+
+
+.review-section {
+
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 12px;
+
+    margin-top: 30px;
+
+    margin-bottom: 30px;
+
+}
+
+
+.review-section select,
+.review-section textarea {
+
+    width: 100%;
+
+    padding: 12px;
+
+    margin: 10px 0;
+
+    border: 1px solid #ccc;
+
+    border-radius: 6px;
+
+}
+
+
+.review-section textarea {
+
+    min-height: 120px;
+
+}
+
+
+.review-card {
+
+    background: white;
+
+    padding: 20px;
+
+    border-radius: 10px;
+
+    margin-top: 15px;
+
+    box-shadow:
+        0 2px 8px
+        rgba(0,0,0,0.08);
+
+}
+
+
+.movie-buttons {
+
+    display: flex;
+
+    gap: 5px;
+
+}
+
+
+.movie-buttons button {
+
+    flex: 1;
+
+}
+
+
+footer {
+
+    background: #141e30;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 20px;
+
+    margin-top: 50px;
+
+}
+
+
+@media(max-width:700px) {
+
+    .search-section input {
+
+        width: 100%;
+
+    }
+
+
+    #movieForm {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    #movieForm textarea {
+
+        grid-column: auto;
+
+    }
+
+
+    .movie-detail {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .detail-image {
+
+        max-width: 300px;
+
+        margin: auto;
+
+    }
+
+}
